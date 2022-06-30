@@ -1,0 +1,256 @@
+/* COMMON */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+i{
+    cursor: pointer;
+}
+/* BODY */
+body{
+    background-color: #009487;
+}
+#container{
+    width: 80%;
+    height: 95vh;
+    margin: 2.5vh auto;
+    display: flex;
+}
+
+/* LEFT CONTENT */
+#left-content{
+    width: 40%;
+    height: 100%;
+    background-color: blue;
+}
+/* HEADER */
+#left-content header{
+    border-right: 1px solid #d7d7d7; 
+}
+header{
+    height: 7%;
+    padding: 5px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+}
+.left-header{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+.right-header{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #b1b1b1;
+}
+.right-header i{
+    margin: 0 7px;
+}
+header img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* CALL TO ACTION */
+#call-to-action{
+    height: 8%;
+    background-color: #8edafb;
+    padding: 7px 13px;
+    display: flex;
+    display: flex;
+    align-items: center;
+}
+#left-call-to-action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: min-content;
+    height: min-content;
+    padding: 10px;
+    border-radius: 50%; 
+}
+#left-call-to-action i{
+    color: #8edafb;
+}
+#right-call-to-action{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+#right-call-to-action p{
+    font-size: 13px;
+}
+#right-call-to-action a{
+    font-size: 10px;
+    color: gray;
+}
+/* SEARCH BAR */
+#search{
+    height: 6%;
+    background-color: #fff;
+    padding: 8px;
+    font-size: 14px;
+}
+#search-bar{
+    border: 1px solid #f5f5f5;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+}
+#search-bar label{
+    color: gray;
+}
+#search-bar input{
+    border: none;
+    width: 100%;
+    margin-left: 20px;
+}
+/* CONTACTS AREA */
+#contact-area{
+    height: 80%;
+    background-color: white;
+    /* overflow-y: scroll; */
+}
+.singleContact{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 60px;
+    border-bottom: 1px solid #d7d7d7;
+    cursor: pointer;
+}
+.singleContact img{
+    height: 50px;
+    border-radius: 50%;
+}
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.singleContact p{
+    align-self: flex-start;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.singleContact span{
+    color: gray;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.singleContact span:nth-child(3) {
+    font-size: 10px;
+    align-self: flex-end;
+    /* position: fixed; */
+    position: relative;
+    top: -35px;
+    margin-right: 10px;
+}
+.selected-contact{
+    background-color: #e9ebea;
+}
+
+/* RIGHT CONTENT */
+#right-content{
+    width: 60%;
+    height: 100%;
+}
+#right-content header img{
+    margin-right: 10px
+}
+.right-left-header{
+    display: flex;
+    flex-direction: column;
+}
+/* MAIN */
+main{
+    height: 87%;
+    background-image: url(../img/mine.jpg);
+    padding: 50px 70px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.message{
+    position: relative;
+    width: 270px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.message span{
+    color: gray;
+    font-size: 8px;
+    align-self: flex-end;
+}
+.message i{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: gray;
+    display: none;
+}
+.message:hover i{
+    display: block;
+}
+#message-container{
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    width: min-content
+}
+.message-options{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    background-color: #fff;
+    display: none;
+}
+.message-options p{
+    line-height: 35px;
+    cursor: pointer;
+}
+.show{
+    display: inline;
+}
+.sent{
+    align-self:flex-end;
+}
+.sent_mess{
+    background-color: #d5f9ba;
+
+}
+
+/* FOOTER */
+footer{
+    height: 7%;
+    background-color: #f3eeea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+#emoticon-area{
+    margin-right: 30px;
+}
+
+#input-area{
+    width: 95%;
+    height: 80%;
+}
+input{
+    height: 100%;
+    width: 95%;
+    padding-left: 10px;
+}
