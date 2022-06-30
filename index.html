@@ -55,7 +55,7 @@
 
                 <!-- CONTACT AREA -->
                 <div id="contact-area">
-                    <div @click="selectThisChat(index)" v-for="(singleCon, index) in contacts" class="singleContact" v-show="singleCon.visible">
+                    <div @click="selectThisChat(index)" v-for="(singleCon, index) in contacts" class="singleContact" v-show="singleCon.visible" :class="{'selected-contact' : index === currentElement}">
                         <img :src="'img/avatar' + contacts[index].avatar + '.jpg'" :alt="contacts[index].name">
                         <div class="contact-info">
                             <p>{{contacts[index].name}}</p>
