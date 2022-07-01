@@ -89,18 +89,19 @@
                 </header>
 
                 <main>
-                    
-                    <div id="message-container" v-for="(message, index) in contacts[currentElement].messages" :class="{'sent' : message.status === 'sent'}">
-                        <div class="message" :class="{'sent_mess' : message.status === 'sent'}">
-                            <p>{{message.text}}</p>
-                            <span>{{message.date}}</span> 
-                            <i @click="showOptions"  class="fa-solid fa-angle-down"></i>                           
+                    <!-- <div v-if="contacts[currentElement].messages.length > 0"> -->
+                        <div id="message-container" v-for="(message, index) in contacts[currentElement].messages" :class="{'sent' : message.status === 'sent'}">
+                            <div class="message" :class="{'sent_mess' : message.status === 'sent'}">
+                                <p>{{message.text}}</p>
+                                <span>{{message.date}}</span> 
+                                <i @click="showOptions(index)"  class="fa-solid fa-angle-down"></i>                           
+                            </div>
+                            <div class="message-options" :class="myClass" @mouseleave="hideOptions" v-if="index === currentMessage">
+                                <p>Message info</p>
+                                <p @click="deledeThisMessage(index)">Delede message</p>
+                            </div>
                         </div>
-                        <div class="message-options" :class="myClass" @mouseleave="hideOptions">
-                            <p>Message info</p>
-                            <p @click="deledeThisMessage(index, currentElement)">Delede message</p>
-                        </div>
-                    </div>
+                    <!-- </div> -->
                     
                     
                     

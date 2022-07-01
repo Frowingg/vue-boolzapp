@@ -1,10 +1,11 @@
 var root = new Vue({
     el: '#root',
     data: {
+		currentMessage: null,
 		myClass: '',
 		letterToSearch: '',
 		newMessageText: '',
-		currentElement: 0,
+		currentElement: 3,
 		contacts: [
 			{
 				name: 'Michele',
@@ -130,14 +131,15 @@ var root = new Vue({
 					};
 			});
             },
-			showOptions() {
+			showOptions(index) {
 				this.myClass = 'show'
+				this.currentMessage = index;
 			},
 			hideOptions() {
 				this.myClass = ''
 			},
-			deledeThisMessage(index, currentElement) {
-				this.contacts[currentElement].messages.splice(index, 1);
+			deledeThisMessage(index) {
+				this.contacts[this.currentElement].messages.splice(index, 1);
 			}
 		}
 });
