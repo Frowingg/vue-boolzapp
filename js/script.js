@@ -5,7 +5,7 @@ var root = new Vue({
 		myClass: '',
 		letterToSearch: '',
 		newMessageText: '',
-		currentElement: 0,
+		currentElement: 3,
 		contacts: [
 			{
 				name: 'Michele',
