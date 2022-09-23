@@ -76,7 +76,7 @@ var root = new Vue({
 			{
 				name: 'Luisa',
 				avatar: '_4',
-				visible: true,
+				visible: false,
 				messages: [
 					{
 						date: '10/01/2020 15:30:55',
@@ -122,12 +122,15 @@ var root = new Vue({
 			},
 			searchContacts() {
 				const letterToSearchLower = this.letterToSearch.toLowerCase();
+				console.log(letterToSearchLower)
 				this.contacts.forEach((element) => {
 					const contactNameLower = element.name.toLowerCase();
+					console.log(contactNameLower)
 					if(contactNameLower.includes(letterToSearchLower)) {
-						element.visible = true;
+						// element.visible = true;
 					} else {
-						element.visible = false;
+						// element.visible = false;
+						this.myClass = 'hide';
 					};
 			});
             },

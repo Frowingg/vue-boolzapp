@@ -48,7 +48,7 @@
                 <div id="search">
                     <div id="search-bar">
                         <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                        <input id="search" type="text" placeholder="Cerca o inizia nuova chat" v-model="letterToSearch" @keyup="searchContacts">
+                        <input @keyup="searchContacts()" id="search" type="text" placeholder="Cerca o inizia nuova chat" v-model="letterToSearch" @keyup="searchContacts">
                     </div>
 
                 </div>
