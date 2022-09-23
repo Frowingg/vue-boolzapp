@@ -127,10 +127,9 @@ var root = new Vue({
 					const contactNameLower = element.name.toLowerCase();
 					console.log(contactNameLower)
 					if(contactNameLower.includes(letterToSearchLower)) {
-						// element.visible = true;
+						element.visible = true;
 					} else {
-						// element.visible = false;
-						this.myClass = 'hide';
+						element.visible = false;
 					};
 			});
             },
